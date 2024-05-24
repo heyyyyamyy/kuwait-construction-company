@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Kuwait Construction</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <style>
+	@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+	background: #384047;
+	font-family: 'Raleway', sans-serif;
+}
+
+canvas {
+	background: #fff;
+	display: block;
+	margin: 10px auto 10px;
+	border-radius: 5px;
+	box-shadow: 0 4px 0 0 #222;
+	cursor: crosshair;
+}
+.container {
+	width: 600px;
+	margin: 10px auto 0px auto;
+}
+.controls {
+  text-align: center;
+	min-height: 60px;
+	margin: 0 auto;
+	width: 300px;
+	border-radius: 5px;
+	overflow: hidden;
+  display: flex;
+}
+.btn-green {
+	background: gray;
+	box-shadow: 0 3px 0 0 #384047;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	text-shadow: 0 1px #6A845F;
+	display: block;
+	font-size: 16px;
+	line-height: 40px;
+  border: none;
+	border-radius: 5px;
+	margin: 10px auto;
+	padding: 5px 20px;
+  max-width: 100px;
+}
+
+
+  </style>
+
+  <!-- Fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- Font Awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- Responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="/tab logo.png" type="image/x-icon">
+ 
+</head>
+<body>
+  <!-- header section starts -->
+  <header class="header_section">
+
+    <div class="header_bottom">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="logo-removebg-preview.png" alt="">
+          </a>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="project.html">Project</a>
+              </li>
+              <li class="nav-item ">
+                <div class="dropdown">
+                  <button class="nav-link btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Team
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="humanresource.html">HR Management</a>
+                    <a class="dropdown-item" href="management.html">Management </a>
+
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="testimonial.html">Testimonial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <div class="quote_btn-container">
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- end header section -->
+  <script>var color = "#000000";
+	var context = $("canvas")[0].getContext("2d");
+	var canvas = $("canvas");
+	var lastEvent;
+	var mouseDown = false;
+	var weight = "3";
+	
+	// //Bind weight val to selection on click
+	var updateWeight = function() {
+	  return weight;
+	};
+	
+	//Draw on the canvas on mouse events
+	canvas.mousedown(function(e) {
+	  lastEvent = e;
+	  mousedown = true;
+	}).mousemove(function(e) {
+	  if (mousedown) {
+		context.beginPath();
+		context.moveTo(lastEvent.offsetX, lastEvent.offsetY);
+		context.lineTo(e.offsetX, e.offsetY);
+		context.strokeStyle = color;
+		context.lineWidth = updateWeight();
+		context.stroke();
+		lastEvent = e;
+	  }
+	}).mouseup(function() {
+	  mousedown = false;
+	}).mouseleave(function() {
+	  canvas.mouseup();
+	});
+	
+	//Download your drawing
+	var downloadImg = function() {
+		var img = canvas[0].toDataURL("image/png");
+	  var $imgLink = $("#download").attr("href", img);
+	}
+	
+	var clearSig = function(){
+	  context.clearRect(0, 0, 300, 200);
+	}
+	
+	
+	$("#download").click(downloadImg);
+	$("#clearSig").click(clearSig);
+	</script>
+
+  <h4>There are 3 ways to sign your document.Please choose only one</h4>
+  <div class="container">
+	<div>
+		<h6>Upload Signature Image</h6>
+		<input type="file" id="signature-image" accept="image/*">
+		<label for="signature-image" class="upload-label">Upload Image</label>
+		<button id="clear-image" style="display: none;">Clear</button>
+		
+		
+	  </div>
+<script>// Function to handle file upload
+	$("#signature-image").change(function(event) {
+	  var file = event.target.files[0];
+	  var reader = new FileReader();
+	  reader.onload = function(e) {
+		var imageSrc = e.target.result;
+		$("#uploaded-image").attr("src", imageSrc);
+		$("#uploaded-image").show();
+		$("#clear-image").show();
+	  };
+	  reader.readAsDataURL(file);
+	});
+	
+	// Function to clear the uploaded image
+	$("#clear-image").click(function() {
+	  $("#uploaded-image").attr("src", "");
+	  $("#uploaded-image").hide();
+	  $("#clear-image").hide();
+	  $("#signature-image").val(""); // Clear the file input
+	});
+	</script>	  
+
+    <!-- <div class="section" id="name-input">
+      <h4>Enter Your Name:</h4>
+      <input type="text" placeholder="Your Name" />
+      <div id="buttons-container">
+        <button id="clear-button">Clear</button>
+        <button id="submit-button">Submit Name</button>
+      </div>
+    </div> -->
+
+    <!-- <div class="section" id="signature-upload">
+      <h4>Upload Your Signature:</h4>
+      <input type="file" accept="image/*" />
+      <div id="buttons-container">
+        <button id="clear-button">Clear</button>
+        <button id="submit-button">Upload Signature</button>
+      </div>
+    </div> -->
+
+    <!-- <div class="section" id="signature-container">
+      <h4>Draw Your Signature:</h4>
+      <div id="signature">
+		<canvas width="300" height="200"></canvas>
+		<div class="controls">
+			  <a class="btn-green" href="#" id="download">Download</a>
+			  <a class="btn-green" href="#" id="clearSig">Clear Canvas</a>
+		</div>
+	  </div> -->
+    </div>
+
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

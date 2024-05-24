@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Kuwait Construction</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:regular,bold" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Owl Slider Stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Responsive Styles -->
+    <link href="css/responsive.css" rel="stylesheet" />
+
+    <!-- Owl Carousel Theme -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/tab logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        } */
+        canvas {
+            background: #fff;
+            display: block;
+            margin: 10px auto 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 0 0 #222;
+            cursor: crosshair;
+        }
+
+        .container-sig {
+            max-width: 1200px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .option {
+            flex: 1;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            display: block;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .upload-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: orange;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .upload-label:hover {
+            background-color: orange;
+        }
+
+        .btn-sig {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: orange;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        #sig-dataUrl {
+            width: 100%;
+            height: 100px;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        #sig-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .dropdownMenuButton {
+            background-color: white !important;
+        }
+
+        #name-display {
+            font-family: 'Monsieur La Doulaise', cursive;
+            font-size: larger;
+            text-align: center;
+            width: 300px; height: 150px;  border-radius: 10px; font-size: 400%;
+            margin-left: auto;
+    margin-right: auto;
+
+        }
+
+        #sig-canvas {
+            width: 300px;
+            height: 150px;
+
+        }
+        .container-new {
+        /* Add this style to center align text */
+        text-align: center;
+       
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+    }
+
+    #contract-date {
+        /* Add this style to make content bold */
+        font-weight: bold;
+       
+        text-align: left;
+        display: inline-block;
+    }
+    .bold-left {
+    /* New CSS class to align text left and make it bold */
+    text-align: left;
+    font-weight: bold;
+}
+    </style>
+</head>
+
+<body>
+    <!-- header section strats -->
+    <header class="header_section">
+
+
+        <div class="header_bottom">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="logo-removebg-preview.png" alt="">
+                    </a>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""> </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="index.html">Home <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html"> About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project.html">Project</a>
+                            </li>
+                            <li class="nav-item ">
+                                <div class="dropdown">
+                                    <button class="nav-link btn dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Team
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="humanresource.html">HR Management</a>
+                                        <a class="dropdown-item" href="management.html">Management </a>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="testimonial.html">Testimonial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+
+
+                        </ul>
+                        <div class="quote_btn-container">
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- end header section -->
+    <div class="container-new">
+        <h3 >Kuwait Construction Company Service Contract</h3>
+       
+        <br><br> <br>
+        <p style="text-align: left;">Please sign below to acknowledge your agreement. By signing this document, your candidature with Kuwait
+            Construction Company will be legally confirmed, and you will be required to abide by it starting today.</p>
+            
+    </div>
+    &nbsp;&nbsp;&nbsp;<b><div id="contract-date" class="bold-left container"></div></b>
+    
+    <div class="container-sig">
+      
+        <div class="option" id="signature">
+            <h6>1.Draw Signature</h6>
+            <img id="sig-image" src="" alt="Your signature will go here!" />
+
+            <canvas id="sig-canvas"></canvas>
+            <button id="sig-submitBtn" class="btn-sig controls">Submit</button>
+            <button id="sig-clearBtn" class="btn-sig controls">Clear</button>
+            <!-- id="download" id="clearSig" -->
+            <div class="row" id="sig-textbox-row" style="display: none;">
+                <div class="col-md-12">
+                    <textarea id="sig-dataUrl" class="form-control"
+                        rows="5">Data URL for your signature will go here!</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="option">
+            <h6>2. Name as Signature</h6>
+            <br>
+            <h4 id="name-display"></h4>
+            <form onsubmit="return submitNameSignature()">
+                <input type="text" id="nameInput" placeholder="Enter Your Name">
+                <br>
+                <button type="submit" class="btn-sig">Submit</button>
+                <button type="button" id="clearName" class="btn-sig" onclick="return clearNameSignature()">Clear</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!-- info section -->
+    <section class="info_section ">
+
+        <div class="container ">
+            <h4>Contact</h6>
+                <div class="row">
+
+                    <div class="col-12 col-xl-6 ">
+                        <p>For Indian Government Projects: 022-415-07004 </p>
+                        <p>For Complaints & Escalation: 022-415-07005 </p>
+                        <p>For General Enquiry: 022-415-07006</p>
+                        <p>For Recruitment: 022-415-07007</p>
+                        <p>For Projects: 022-415-07008 </p>
+                    </div>
+
+                    <div class="col-12 col-xl-6 ">
+                        <div class="info_form">
+                            <h4>
+                                SIGN UP TO OUR NEWSLETTER
+                            </h4>
+                            <form action="" onsubmit="Subscribe()">
+                                <input type="text" placeholder="Enter Your Email" />
+                                <button type="submit">
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- end info_section -->
+
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+            <p>
+                © 2024 All Rights Reserved By Kuwait Construction Company
+            </p>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+    <!-- Scripts -->
+    <script>
+         // for draw signature
+      (function () {
+          window.requestAnimFrame = (function (callback) {
+              return window.requestAnimationFrame ||
+                  window.webkitRequestAnimationFrame ||
+                  window.mozRequestAnimationFrame ||
+                  window.oRequestAnimationFrame ||
+                  window.msRequestAnimaitonFrame ||
+                  function (callback) {
+                      window.setTimeout(callback, 1000 / 60);
+                  };
+          })();
+  
+          var canvas = document.getElementById("sig-canvas");
+          var ctx = canvas.getContext("2d");
+          ctx.strokeStyle = "#222222";
+          ctx.lineWidth = 4;
+  
+          var drawing = false;
+          var mousePos = {
+              x: 0,
+              y: 0
+          };
+          var lastPos = mousePos;
+  
+          canvas.addEventListener("mousedown", function (e) {
+              drawing = true;
+              lastPos = getMousePos(canvas, e);
+          }, false);
+  
+          canvas.addEventListener("mouseup", function (e) {
+              drawing = false;
+          }, false);
+  
+          canvas.addEventListener("mousemove", function (e) {
+              mousePos = getMousePos(canvas, e);
+          }, false);
+  
+          // Add touch event support for mobile
+          canvas.addEventListener("touchstart", function (e) {
+  
+          }, false);
+  
+          canvas.addEventListener("touchmove", function (e) {
+              var touch = e.touches[0];
+              var me = new MouseEvent("mousemove", {
+                  clientX: touch.clientX,
+                  clientY: touch.clientY
+              });
+              canvas.dispatchEvent(me);
+          }, false);
+  
+          canvas.addEventListener("touchstart", function (e) {
+              mousePos = getTouchPos(canvas, e);
+              var touch = e.touches[0];
+              var me = new MouseEvent("mousedown", {
+                  clientX: touch.clientX,
+                  clientY: touch.clientY
+              });
+              canvas.dispatchEvent(me);
+          }, false);
+  
+          canvas.addEventListener("touchend", function (e) {
+              var me = new MouseEvent("mouseup", {});
+              canvas.dispatchEvent(me);
+          }, false);
+  
+          function getMousePos(canvasDom, mouseEvent) {
+              var rect = canvasDom.getBoundingClientRect();
+              return {
+                  x: mouseEvent.clientX - rect.left,
+                  y: mouseEvent.clientY - rect.top
+              }
+          }
+  
+          function getTouchPos(canvasDom, touchEvent) {
+              var rect = canvasDom.getBoundingClientRect();
+              return {
+                  x: touchEvent.touches[0].clientX - rect.left,
+                  y: touchEvent.touches[0].clientY - rect.top
+              }
+          }
+  
+          function renderCanvas() {
+              if (drawing) {
+                  ctx.moveTo(lastPos.x, lastPos.y);
+                  ctx.lineTo(mousePos.x, mousePos.y);
+                  ctx.stroke();
+                  lastPos = mousePos;
+              }
+          }
+  
+          // Prevent scrolling when touching the canvas
+          document.body.addEventListener("touchstart", function (e) {
+              if (e.target == canvas) {
+                  e.preventDefault();
+              }
+          }, false);
+          document.body.addEventListener("touchend", function (e) {
+              if (e.target == canvas) {
+                  e.preventDefault();
+              }
+          }, false);
+          document.body.addEventListener("touchmove", function (e) {
+              if (e.target == canvas) {
+                  e.preventDefault();
+              }
+          }, false);
+  
+          (function drawLoop() {
+              requestAnimFrame(drawLoop);
+              renderCanvas();
+          })();
+  
+          function clearCanvas() {
+              canvas.width = canvas.width;
+          }
+  
+          // Set up the UI
+          var sigText = document.getElementById("sig-dataUrl");
+          var sigImage = document.getElementById("sig-image");
+          var clearBtn = document.getElementById("sig-clearBtn");
+          var submitBtn = document.getElementById("sig-submitBtn");
+          clearBtn.addEventListener("click", function (e) {
+              clearCanvas();
+              sigText.innerHTML = "Data URL for your signature will go here!";
+              sigImage.setAttribute("src", "");
+              document.getElementById("sig-textbox-row").style.display = "none"; // Hide textbox
+          }, false);
+          submitBtn.addEventListener("click", function (e) {
+              var dataUrl = canvas.toDataURL();
+              sigText.innerHTML = dataUrl;
+              sigImage.setAttribute("src", dataUrl);
+              document.getElementById("sig-textbox-row").style.display = "none"; // Hide textbox
+          }, false);
+  
+      })();
+  </script></script>
+    
+    <script>
+   
+      
+        // Function to handle name signature submission and validation
+        function submitNameSignature() {
+            var name = nameInput.value.trim(); // Trim any leading/trailing whitespace
+            var nameDisplay = document.getElementById("name-display");
+
+            if (name !== "") {
+                nameDisplay.textContent =  name; // Display name
+                alert("Your documents have been signed successfully!");
+            } else {
+                alert("Please enter a valid name.");
+            }
+
+            // Prevent the form from being submitted
+            return false;
+        }
+
+        // Function to handle clearing name signature
+        function clearNameSignature() {
+            var nameInput = document.getElementById("nameInput");
+            var nameDisplay = document.getElementById("name-display");
+
+            // Clear input field and displayed signature
+            nameInput.value = "";
+            nameDisplay.textContent = "";
+
+            // Prevent the form from being submitted
+            return false;
+        }
+
+        // Function to format date as "Month Day, Year"
+        function formatDate(date) {
+            const options = { month: 'long', day: 'numeric', year: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
+        }
+
+        // Get the current date
+        var currentDate = new Date();
+
+        // Get the container element where the date will be displayed
+        var dateContainer = document.createElement("div");
+        dateContainer.innerHTML = "Date: " + formatDate(currentDate);
+
+        // Get the container element for the contract section
+        var contractContainer = document.querySelector("#contract-date:first-of-type");
+        contractContainer.appendChild(dateContainer);
+    </script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZN+FMqW2NI7i5WzRmVyRF1/npwhD0Ib+AzZ2U6Eya+EBh2WRLZlZDA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

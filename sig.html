@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electronic Signature</title>
+<style>
+#signature-container {
+  text-align: center;
+  margin-top: 50px;
+  position: relative; /* Ensure relative positioning for absolute positioning of popup */
+}
+
+#signature-popup {
+  display: none; /* Hide popup by default */
+  position: absolute; /* Position popup absolutely relative to signature container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Ensure popup appears above other content */
+}
+
+#signature-popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px; /* Set width of popup */
+  max-width: 90%; /* Ensure popup doesn't exceed container width */
+}
+
+#signature-popup-content img {
+  max-width: 100%;
+}
+
+</style>
+</head>
+<body>
+
+<div id="signature-container">
+  <h2>Electronic Signature</h2>
+  <canvas id="signature-pad" width="350" height="100"></canvas>
+  <div id="buttons-container">
+    <button id="clear-button">Clear</button>
+    <button id="submit-button">Submit</button>
+  </div>
+  <div id="success-message" hidden>ss</div>
+  <div id="signature-popup">
+    <div id="signature-popup-content"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var canvas = document.getElementById('signature-pad');
+  var ctx = canvas.getContext('2d');
+  var clearButton = document.getElementById('clear-button');
+  var submitButton = document.getElementById('submit-button');
+  var successMessage = document.getElementById('success-message');
+  var signaturePopup = document.getElementById('signature-popup');
+  var signaturePopupContent = document.getElementById('signature-popup-content');
+
+  var drawing = false;
+  var lastX = 0;
+  var lastY = 0;
+
+  canvas.addEventListener('mousedown', function(e) {
+    drawing = true;
+    lastX = e.clientX - canvas.offsetLeft;
+    lastY = e.clientY - canvas.offsetTop;
+  });
+
+  canvas.addEventListener('mousemove', function(e) {
+    if (drawing === true) {
+      drawLine(ctx, lastX, lastY, e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+      lastX = e.clientX - canvas.offsetLeft;
+      lastY = e.clientY - canvas.offsetTop;
+    }
+  });
+
+  canvas.addEventListener('mouseup', function() {
+    drawing = false;
+  });
+
+  clearButton.addEventListener('click', function() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    successMessage.style.display = 'none';
+  });
+
+  submitButton.addEventListener('click', function() {
+    var dataUrl = canvas.toDataURL();
+    if (dataUrl.length > 100) {
+      // Check if signature is drawn
+      if (!isSignatureBlank(dataUrl)) {
+        showSuccessPopup(dataUrl);
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+        setTimeout(function() {
+          location.reload();
+        }, 3000); // Refresh after 3 seconds
+      } else {
+        alert('Please provide a valid signature.');
+      }
+    } else {
+      alert('Please provide a signature.');
+    }
+  });
+
+  function drawLine(context, x1, y1, x2, y2) {
+    context.beginPath();
+    context.strokeStyle = '#000';
+    context.lineWidth = 2;
+    context.moveTo(x1, y1);
+    context.lineTo(x2, y2);
+    context.stroke();
+    context.closePath();
+  }
+
+  function showSuccessPopup(signatureDataUrl) {
+    var signatureImage = new Image();
+    signatureImage.src = signatureDataUrl;
+    signaturePopupContent.innerHTML = '<img src="' + signatureDataUrl + '" /><br>You have signed the documents electronically';
+    signaturePopup.style.display = 'block';
+  }
+
+  function isSignatureBlank(dataUrl) {
+    // Check if the data URL represents a blank image (all pixels are transparent)
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+    var img = new Image();
+    img.src = dataUrl;
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0);
+    var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    for (var i = 0; i < imageData.data.length; i += 4) {
+      if (imageData.data[i + 3] !== 0) {
+        // Found a non-transparent pixel, signature is not blank
+        return false;
+      }
+    }
+    // All pixels are transparent, signature is blank
+    return true;
+  }
+});
+</script>
+
+</body>
+</html>
