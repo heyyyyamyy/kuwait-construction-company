@@ -95,7 +95,10 @@ body {
   }
   
   #Hero-bg-project{
-    background-color: #FFF5EE;
+    background: url(/zac-edmonds-N1LBcqLP9ec-unsplash.jpg);
+    background-size: cover; 
+      background-attachment: scroll; /* This makes the background image scrollable */
+      background-position: center; /* Adjust as needed */
   }
   
   
@@ -1667,4 +1670,9 @@ body {
   background-color: #f07b26;
   color: white;
   border: none;
+}
+
+
+#why-chose-us-width{
+  width: 1486px;
 }
