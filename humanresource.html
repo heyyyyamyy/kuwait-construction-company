@@ -14,6 +14,7 @@
 
   <title>Kuwait Construction</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
@@ -32,38 +33,64 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+  integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="/tab logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <style>
-    .card {
-
+   .employee-card {
+      display: flex;
+      align-items: center;
       margin-bottom: 20px;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 150px;
+    }
+    .employee-details {
+      flex: 1;
+      overflow: hidden;
+    }
+    .employee-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-left: 20px;
+      flex-shrink: 0;
+    }
+    .employee-details p {
+      margin: 0;
+      margin-bottom: 8px; /* Add space between items */
+    }
+    .employee-details i {
+      margin-right: 5px;
     }
 
-    .fade-in {
-      opacity: 1;
-    }
-
-    #abdul {
-      font-size: 13.5px;
-    }
-
-    p {
-      font-size: 15px;
-    }
-
-    /* a{
-        color: black;
+    /* #font-size{
+    font-size: 13px;      
     } */
-  </style>
+
+    @media (max-width: 767.98px) { /* Bootstrap's breakpoint for small devices */
+    #font-size {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 767.98px) { /* Bootstrap's breakpoint for small devices */
+    #font-size-1 {
+      font-size: 11px;
+    }
+  }
+
+
+</style>
+
 
 
 </head>
@@ -73,7 +100,7 @@
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-
+      
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
@@ -99,20 +126,18 @@
                 <li class="nav-item ">
                   <a class="nav-link" href="project.html">Project</a>
                 </li>
-
                 <li class="nav-item active">
                   <div class="dropdown">
-                    <button class="nav-link btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Team
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="humanresource.html">HR Management</a>
-                      <a class="dropdown-item" href="management.html">Management </a>
-
+                      <button class="nav-link btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Team
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="humanresource.html">HR Management</a>
+                          <a class="dropdown-item" href="management.html">Management </a>
+                       
+                      </div>
                     </div>
-                  </div>
-                </li>
+               </li> 
                 <li class="nav-item">
                   <a class="nav-link" href="testimonial.html">Testimonial</a>
                 </li>
@@ -133,221 +158,155 @@
     <!-- end header section -->
   </div>
 
-
-  <div class="container py-2">
-    <h1 class="text-center py-3  my-6">HR Management</h1>
+  <div class="container mt-5">
     <div class="row">
-      <!-- Employee 1 -->
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/Aafiya.jpeg" class="card-img-top" alt="Employee 1">
-          <div class="card-body">
-            <h5 class="card-title">Aafiya Naaz</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text"><i class="fa-regular fa-envelope"></i> aafiya@kuwaitconstructions.com </p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 022-415-07004  </p> -->
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Aafiya Naaz</h5>
+            <p id="font-size"><i class="fas fa-envelope"></i> aafiya@kuwaitconstructions.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/Aafiya.jpeg" alt="John Doe" class="employee-img">
         </div>
       </div>
-      <!-- Employee 2 -->
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/fatma ali.jpeg" class="card-img-top" alt="Employee 2">
-          <div class="card-body">
-            <h5 class="card-title">Fatma Ali</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text"><i class="fa-regular fa-envelope"></i> fatma@kuwaitconstructions.com </p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 022-415-07005 </p> -->
-
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Fatma Ali</h5>
+            <p id="font-size"><i class="fas fa-envelope"></i> fatma@kuwaitconstructions.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/fatma ali.jpeg" alt="Jane Smith" class="employee-img">
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/walid.jpeg" class="card-img-top" alt="Employee 2">
-          <div class="card-body">
-            <h5 class="card-title">Walid al-katib</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text"><i class="fa-regular fa-envelope"></i> walid@kuwaitconstructions.com </p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 022-415-07006</p> -->
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Walid al-katib</h5>
+            <p id="font-size-1"><i class="fas fa-envelope"></i> walid@kuwaitconstructioncompany.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/walid.jpeg" alt="Mark Johnson" class="employee-img">
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/nazia.jpeg" class="card-img-top" alt="Employee 2">
-          <div class="card-body">
-            <h5 class="card-title">Nazia Malik</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text"><i class="fa-regular fa-envelope"></i> nazia@kuwaitconstructions.com </p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 022-415-07007</p> -->
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Nazia Malik</h5>
+            <p id="font-size"><i class="fas fa-envelope"></i> nazia@kuwaitconstructions.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/nazia.jpeg" alt="Emily Davis" class="employee-img">
         </div>
       </div>
-
-
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/aabish.jpeg" class="card-img-top" alt="Employee 2">
-          <div class="card-body">
-            <h5 class="card-title">Aabish Gulam</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text"><i class="fa-regular fa-envelope"></i> aabish@kuwaitconstructions.com </p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 022-415-07008 </p> -->
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Aabish Gulam</h5>
+            <p id="font-size"><i class="fas fa-envelope"></i> aabish@kuwaitconstructions.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/aabish.jpeg" alt="Michael Brown" class="employee-img">
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/aakil.jpeg" class="card-img-top" alt="Employee 2">
-          <div class="card-body">
-            <h5 class="card-title">Aakil Jamil</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text"><i class="fa-regular fa-envelope"></i> aakil@kuwaitconstructions.com</p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 415-07106</p> -->
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Aakil Jamil</h5>
+            <p id="font-size"><i class="fas fa-envelope"></i> aakil@kuwaitconstructions.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/aakil.jpeg" alt="Sarah Wilson" class="employee-img">
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/abdul.jpeg" class="card-img-top" alt="Employee 2">
-          <div class="card-body">
-            <h5 class="card-title">Abdul Rahman</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text" id="abdul"><i class="fa-regular fa-envelope"></i>
-              abdulrahman@kuwaitconstructions.com </p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 415-07107</p> -->
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Abdul Rahman</h5>
+            <p id="font-size-1"><i class="fas fa-envelope"></i> abdulrahman@kuwaitconstructions.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/abdul.jpeg" alt="David Clark" class="employee-img">
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/saadia.jpeg" class="card-img-top" alt="Employee 2">
-          <div class="card-body">
-            <h5 class="card-title">Saadia Ahmed</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text"><i class="fa-regular fa-envelope"></i> saadia@kuwaitconstructions.com </p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 415-07108</p> -->
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Saadia Ahmed</h5>
+            <p id="font-size"><i class="fas fa-envelope"></i> saadia@kuwaitconstructions.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/saadia.jpeg" alt="Linda Martinez" class="employee-img">
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/sahana.jpeg" class="card-img-top" alt="Employee 2">
-          <div class="card-body">
-            <h5 class="card-title">Saahana Rashid</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text"><i class="fa-regular fa-envelope"></i> saahana@kuwaitconstructions.com </p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 415-07109</p> -->
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Saahana Rashid</h5>
+            <p id="font-size"><i class="fas fa-envelope"></i> saahana@kuwaitconstructions.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/sahana.jpeg" alt="Robert Taylor" class="employee-img">
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/kadim.jpeg" class="card-img-top" alt="Employee 2">
-          <div class="card-body">
-            <h5 class="card-title">Kadim Bakhsh</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text"><i class="fa-regular fa-envelope"></i> kadim@kuwaitconstructions.com </p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 415-07042 </p> -->
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Kadim Bakhsh</h5>
+            <p id="font-size"><i class="fas fa-envelope"></i>kadim@kuwaitconstructions.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/kadim.jpeg" alt="Jessica Moore" class="employee-img">
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card fade-in">
-          <img src="/mail/fatima.jpeg" class="card-img-top" alt="Employee 2">
-          <div class="card-body">
-            <h5 class="card-title">Fatima shakeel</h5>
-            <p class="card-text">HR Manager</p>
-            <p class="card-text" id="abdul"><i class="fa-regular fa-envelope"></i>
-              fatimashakeel@kuwaitconstructions.com </p>
-            <!-- <p class="card-text"><i class="fa-solid fa-phone"></i> 415-07043 </p> -->
+      <div class="col-md-6">
+        <div class="employee-card">
+          <div class="employee-details">
+            <h5>Fatima shakeel</h5>
+            <p id="font-size-1"><i class="fas fa-envelope"></i> fatimashakeel@kuwaitconstructions.com</p>
+            <p><i class="fas fa-briefcase"></i> HR Manager</p>
           </div>
+          <img src="mail/fatima.jpeg" alt="William Harris" class="employee-img">
         </div>
       </div>
-
-
-
     </div>
   </div>
 
 
+ 
+
 
   <!-- info section -->
-  <section class="info_section ">
-
-    <div class="container ">
-      <h4>Contact</h6>
-        <div class="row">
-
-          <div class="col-12 col-xl-6 ">
-            <p>For Indian Government Projects: 022-415-07004 </p>
-            <p>For Complaints & Escalation: 022-415-07005 </p>
-            <p>For General Enquiry: 022-415-07006</p>
-            <p>For Recruitment: 022-415-07007</p>
-            <p>For Projects: 022-415-07008 </p>
-
-            <p>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  Email: info@kuwaitconstructions.com
-                </span>
-              </a>
-            </p>
-            <!-- <p>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  Email: info@kuwaitconstructions.com
-                </span>
-              </a>
-            </p> -->
+  <section class="info_section">
+    <div class="container">
+      <h4>Contact</h4>
+      <div class="row">
+        <div class="col-12 col-xl-6">
+          <p>For Indian Government Projects: 022-415-07101</p>
+          <p>For Complaints & Escalation: 022-415-07102</p>
+          <p>For General Enquiry: 022-415-07103</p>
+          <p>For Recruitment: 022-415-07104</p>
+          <p>For Projects: 022-415-07105</p>
+          <p>
+            <a href="mailto:info@kuwaitconstructions.com">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>Email: info@kuwaitconstructions.com</span>
+            </a>
+          </p>
+        </div>
+        <div class="col-12 col-xl-6">
+          <div class="info_form">
+            <h4>SIGN UP TO OUR NEWSLETTER</h4>
+            <form action="" onsubmit="Subscribe()">
+              <input type="text" placeholder="Enter Your Email" />
+              <button type="submit">Subscribe</button>
+            </form>
           </div>
-
-          <div class="col-12 col-xl-6 ">
-            <div class="info_form">
-              <h4>
-                SIGN UP TO OUR NEWSLETTER
-              </h4>
-              <form action="" onsubmit="Subscribe()">
-                <input type="text" placeholder="Enter Your Email" />
-                <button type="submit">
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
-
-
         </div>
-        <div>
-
-
-        </div>
-
-        <!-- <div class="info_top ">
-        <div class="row info_main_row">
-          <div class="col-sm-6 col-md-4 col-lg-3">
-           
-          </div> -->
-        <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
-
-        </div>
-        <div class="col-md-4">
-
-        </div>
+      </div>
     </div>
-    </div>
-    <div class="info_bottom">
+    <div class="info_bottom mx-3">
       <div class="row">
         <div class="col-md-2">
           <div class="info_logo">
@@ -357,24 +316,20 @@
           </div>
         </div>
         <div class="col-md-4 ml-auto">
-          <!-- <div class="social_box">
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-            </div> -->
+          <div class="social_box">
+            <a href="https://www.facebook.com/people/Kuwait-Construction-Company/61560694737477/">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <!-- <a href="https://twitter.com/yourprofile">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a> -->
+            <a href="https://www.linkedin.com/company/kuwait-construction-company">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            
+          </div>
         </div>
       </div>
-
-    </div>
     </div>
   </section>
   <!-- end info_section -->
@@ -408,36 +363,36 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
+    
+      $('.owl-carousel').owlCarousel({
+          rtl: true,
+          loop: true,
+          margin: 10,
+          nav: true,
 
-    $('.owl-carousel').owlCarousel({
-      rtl: true,
-      loop: true,
-      margin: 10,
-      nav: true,
-
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 3
-        },
-        1000: {
-          items: 3
-        }
-      }
-    })
+          responsive: {
+              0: {
+                  items: 1
+              },
+              600: {
+                  items: 3
+              },
+              1000: {
+                  items: 3
+              }
+          }
+      })
   </script>
-
-  <script src="js/script.js"></script>
+  <script src="/js/script.js"></script>
 
 </body>
 

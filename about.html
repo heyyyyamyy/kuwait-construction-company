@@ -11,6 +11,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
     <title>Kuwait Construction</title>
@@ -96,6 +97,103 @@
 
         .quote-card:hover {
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .employee-card {
+
+            display: flex;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+
+            border: 1px solid black;
+
+            padding: 10px;
+
+            border-radius: 5px;
+
+            overflow: hidden;
+
+            height: 150px;
+
+        }
+
+        .employee-details {
+
+            flex: 1;
+
+            overflow: hidden;
+
+        }
+
+        .employee-img {
+
+            width: 100px;
+
+            height: 100px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            margin-left: 20px;
+
+            flex-shrink: 0;
+
+        }
+
+        .employee-details p {
+
+            margin: 0;
+
+            margin-bottom: 8px;
+            /* Add space between items */
+
+        }
+
+        .employee-details i {
+
+            margin-right: 5px;
+
+        }
+
+
+
+        /* #font-size{
+
+font-size: 13px;      
+
+} */
+
+
+
+        @media (max-width: 767.98px) {
+            /* Bootstrap's breakpoint for small devices */
+
+            #font-size {
+
+                font-size: 13px;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 767.98px) {
+            /* Bootstrap's breakpoint for small devices */
+
+            #font-size-1 {
+
+                font-size: 11px;
+
+            }
+
+        }
+
+        #bg-col-team{
+            background-color: #77777711;
         }
     </style>
 
@@ -272,123 +370,91 @@
         </div>
     </section>
 
-    <div class="team mt-125 pb-5">
+    <div class="team mt-125 pb-5" id="bg-col-team">
         <div class="container">
             <div class="section-header">
 
                 <h2 class="py-3">Meet Our Professional Consulting Team</h2>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="https://img.getimg.ai/generated/img-dcbn1iPAB0dNZMvpRZqaU.jpeg" alt="">
+
+                <div class="col-md-6">
+
+                    <div class="employee-card">
+
+                        <div class="employee-details">
+
+                            <h5>Simeon Norris</h5>
+
+
+                            <p><i class="fas fa-briefcase"></i> Chief Financial Officer</p>
+
                         </div>
-                        <div class="team-text">
 
-                            <p>Chief Executive Officer</p>
+                        <img src="manegment/cfo.jpg" alt="John Doe" class="employee-img">
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-6 py-lg-4 ">
-                    <div class="quote-card">
-
-                        <div class="quote-content">
-                            <blockquote>
-                                <p><i class="fa-solid fa-quote-left"></i> <i>Success is more than just maximizing
-                                        profits; it's also about fostering an environment where each person feels
-                                        appreciated and enabled to provide their maximum effort.
-
-                                    </i> <i class="fa-solid fa-quote-right"></i> </p>
-                                <footer>- >Abd al-Rahman</footer>
-                            </blockquote>
-                        </div>
                     </div>
 
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="https://img.getimg.ai/generated/img-Kypkm53RZqrc6nfhkKQWN.jpeg" alt="">
-                        </div>
-                        <div class="team-text">
 
-                            <p>Chief Financial Officer</p>
+                <div class="col-md-6">
+
+                    <div class="employee-card">
+
+                        <div class="employee-details">
+
+                            <h5>Kareem Abdul Aziz</h5>
+
+
+                            <p><i class="fas fa-briefcase"></i>Chief Technology Officer</p>
 
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-6 py-lg-4">
-                    <div class="quote-card">
 
-                        <div class="quote-content">
-                            <blockquote>
-                                <p><i class="fa-solid fa-quote-left"></i> <i>Although numbers are the language of
-                                        business, strategy and decision-making are driven by the insight that lies
-                                        behind them.</i> <i class="fa-solid fa-quote-right"></i></p>
-                                <footer>- >Khalid al-Amin </footer>
-                            </blockquote>
-                        </div>
+                        <img src="manegment/cto.jpg" alt="Jane Smith" class="employee-img">
+
                     </div>
 
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="https://img.getimg.ai/generated/img-NNkIDv74U58t9KLkFYtVr.jpeg" alt="">
-                        </div>
-                        <div class="team-text">
 
-                            <p>Chief Technology Officer</p>
+                <div class="col-md-6">
+
+                    <div class="employee-card">
+
+                        <div class="employee-details">
+
+                            <h5>Michael Hoover</h5>
+
+
+                            <p><i class="fas fa-briefcase"></i>Chief Executive Officer</p>
 
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-6 py-lg-4">
-                    <div class="quote-card">
 
-                        <div class="quote-content">
-                            <blockquote>
-                                <p><i class="fa-solid fa-quote-left"></i> <i> Accept disruption; it's the first step
-                                        toward innovation. Let's take the lead by being flexible, agile, and unafraid to
-                                        make progress.
-                                    </i> <i class="fa-solid fa-quote-right"></i> </p>
-                                <footer>- >Omar ibn Ali</footer>
-                            </blockquote>
-                        </div>
+                        <img src="manegment/ceo.jpg" alt="Mark Johnson" class="employee-img">
+
                     </div>
 
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="https://img.getimg.ai/generated/img-pXzbD6GYl1hTTRoQzufNh.jpeg" alt="">
-                        </div>
-                        <div class="team-text">
 
-                            <p>Human Resource Director</p>
+                <div class="col-md-6">
+
+                    <div class="employee-card">
+
+                        <div class="employee-details">
+
+                            <h5>Youssef Hassan</h5>
+
+
+                            <p><i class="fas fa-briefcase"></i> HR Director</p>
 
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-6 py-lg-4">
-                    <div class="quote-card">
 
-                        <div class="quote-content">
-                            <blockquote>
-                                <p> <i class="fa-solid fa-quote-left"></i> <i> The bonding agent that holds teams
-                                        together is communication. Let's cultivate trust, open communication, and
-                                        transparency to forge solid bonds and promote teamwork.</i> <i
-                                        class="fa-solid fa-quote-right"></i> </p>
-                                <footer>- >Mohammad
-                                    Ahmad
-                                    Ali</footer>
-                            </blockquote>
-                        </div>
+                        <img src="manegment/hr.jpg" alt="Emily Davis" class="employee-img">
+
                     </div>
 
                 </div>
+
+
             </div>
         </div>
     </div>
@@ -539,64 +605,35 @@
 
 
 
-    <section class="info_section ">
-
-        <div class="container ">
-            <h4>Contact</h6>
-                <div class="row">
-
-                    <div class="col-12 col-xl-6 ">
-                        <p>For Indian Government Projects: 022-415-07004 </p>
-                        <p>For Complaints & Escalation: 022-415-07005 </p>
-                        <p>For General Enquiry: 022-415-07006</p>
-                        <p>For Recruitment: 022-415-07007</p>
-                        <p>For Projects: 022-415-07008 </p>
-
-                        <p>
-                            <a href="">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <span>
-                                    Email: info@kuwaitconstructions.com
-                                </span>
-                            </a>
-                        </p>
+    <section class="info_section">
+        <div class="container">
+            <h4>Contact</h4>
+            <div class="row">
+                <div class="col-12 col-xl-6">
+                    <p>For Indian Government Projects: 022-415-07101</p>
+                    <p>For Complaints & Escalation: 022-415-07102</p>
+                    <p>For General Enquiry: 022-415-07103</p>
+                    <p>For Recruitment: 022-415-07104</p>
+                    <p>For Projects: 022-415-07105</p>
+                    <p>
+                        <a href="mailto:info@kuwaitconstructions.com">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <span>Email: info@kuwaitconstructions.com</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-12 col-xl-6">
+                    <div class="info_form">
+                        <h4>SIGN UP TO OUR NEWSLETTER</h4>
+                        <form action="" onsubmit="Subscribe()">
+                            <input type="text" placeholder="Enter Your Email" />
+                            <button type="submit">Subscribe</button>
+                        </form>
                     </div>
-
-                    <div class="col-12 col-xl-6 ">
-                        <div class="info_form">
-                            <h4>
-                                SIGN UP TO OUR NEWSLETTER
-                            </h4>
-                            <form action="" onsubmit="Subscribe()">
-                                <input type="text" placeholder="Enter Your Email" />
-                                <button type="submit">
-                                    Subscribe
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-
-
                 </div>
-                <div>
-
-
-                </div>
-
-                <!-- <div class="info_top ">
-            <div class="row info_main_row">
-              <div class="col-sm-6 col-md-4 col-lg-3">
-               
-              </div> -->
-                <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
-
-                </div>
-                <div class="col-md-4">
-
-                </div>
+            </div>
         </div>
-        </div>
-        <div class="info_bottom">
+        <div class="info_bottom mx-3">
             <div class="row">
                 <div class="col-md-2">
                     <div class="info_logo">
@@ -606,28 +643,22 @@
                     </div>
                 </div>
                 <div class="col-md-4 ml-auto">
-                    <!-- <div class="social_box">
-                  <a href="">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                </div> -->
+                    <div class="social_box">
+                        <a href="https://www.facebook.com/people/Kuwait-Construction-Company/61560694737477/">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <!-- <a href="https://twitter.com/yourprofile">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a> -->
+                        <a href="https://www.linkedin.com/company/kuwait-construction-company">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                    </div>
                 </div>
             </div>
-
-        </div>
         </div>
     </section>
-    <!-- end info_section -->
-
     <!-- footer section -->
     <footer class="footer_section">
         <div class="container">
